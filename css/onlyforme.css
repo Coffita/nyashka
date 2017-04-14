@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+     background-image: url(/tasks/nyashka/img/cat.jpg);
+     background-size: 100%;
+}
+
+input {
+    padding: 4px 0;
+    margin: 2px 0;
+}
