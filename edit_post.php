@@ -5,7 +5,7 @@ require_once __DIR__ . '/models/Post.php';
 
 <form action="edit_post1.php?id=<?=$_GET['id']?>" method="post">
     <div class="new_post1">
-        <?php 
+        <?php
             $post = Post::find_by_id($_GET['id']);
         ?>
         <input class="new_post" type="text" name="title" value="<?=$post->title?>"></br>

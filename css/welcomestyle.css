@@ -5,7 +5,7 @@
 
 body {
     background-color: #555;
-    background-image: url(/tasks/nyashka/img/cat.jpg);
+    background-image: url('../img/space3.jpg');
     background-size: 100%;
 }
 
@@ -38,7 +38,7 @@ body:hover .overlay {
 }
 
 #welcome2 {
-    text-align: left;
+    text-align: center;
     position: relative;
     display: inline-block;
     width: 100px;
@@ -49,10 +49,15 @@ body:hover .overlay {
 
 #welcome2 span {
     position: absolute;
-    left: calc(50% - 33px);
+    left: calc(50% - 35px);
     top: calc(50% - 9px);
 }
 
 a {
     color: #000;
+}
+
+span {
+    font-family: 'Megrim', cursive;
+    font-weight: bold;
 }

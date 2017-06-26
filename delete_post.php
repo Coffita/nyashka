@@ -11,8 +11,8 @@ $result = $post->delete();
 if ($result === true) {
     header('Location: index.php?post_deleted=true');
     exit();
-} else { 
+} else {
     header('Location: delete_post.php?error=error');
-}   
+}
 
 ?>

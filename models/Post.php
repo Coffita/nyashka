@@ -6,6 +6,7 @@ class Post {
     public $title;
     public $text;
     public $is_private;
+    public $date_added;
 
     public function __construct ($title, $text) {
         $this->title = $title;
@@ -16,16 +17,16 @@ class Post {
     public function create() {
         global $conn;
 
-        $sql = "INSERT INTO posts (title, text, is_private) VALUES ('$this->title', '$this->text', '$this->is_private')";
+        $sql = "INSERT INTO posts (title, text, is_private, date_added) VALUES ('$this->title', '$this->text', '$this->is_private', NOW())";
 
         if ($conn->query($sql) === TRUE) {
             return true;
         } else {
             return $conn->error;
-        }   
+        }
 
     }
-    
+
     public function delete() {
         global $conn;
 
@@ -64,6 +65,7 @@ class Post {
             $post = new Post($row['title'], $row['text']);
             $post->id = $row['id'];
             $post->is_private = $row['is_private'];
+            $post->date_added = $row['date_added'];
 
             $posts[] = $post;
         }
@@ -80,8 +82,9 @@ class Post {
 
         $row = $result->fetch_assoc();
         $post = new Post($row['title'], $row['text']);
-        $post->id = $row['id']; 
+        $post->id = $row['id'];
         $post->is_private = $row['is_private'];
+        $post->date_added = $row['date_added'];
 
         return $post;
     }

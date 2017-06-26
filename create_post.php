@@ -1,14 +1,8 @@
 <?php
 require_once __DIR__ . '/models/Post.php';
 
-// if (!$auth->is_auth()) {
-//     header('Location: index.php');
-//     exit();
-// }
-
 $title = $_POST['title'];
-$text = $_POST['text'];
-// $user_id = $auth->get_user_id();
+$text = addslashes(nl2br($_POST['text']));
 
 if ($title && $text) {
     $post = new Post($title, $text);
@@ -19,7 +13,8 @@ if ($title && $text) {
         header('Location: index.php?post_created=true');
         exit();
     } else {
+        // die($result);
         header('Location: new_post.php?error=error');
-    }   
+    }
 }
 ?>
