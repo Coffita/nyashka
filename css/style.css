@@ -171,16 +171,16 @@ h1.post_head {
 }
 
 .end_post {
-  width: 30px;
-  height: 30px;
-  opacity: 1;
+    width: 30px;
+    height: 30px;
+    opacity: 1;
 }
 
 .end_post1 {
-  width: 100%;
-  text-align: center;
-  margin-top: 10px;
-  opacity: 0.8;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    opacity: 0.8;
 
 }
 
@@ -188,27 +188,69 @@ h1.post_head {
     text-align: right;
 }
 
-.feedback_wrapper {
-    top: 54px;
-    vertical-align: middle;
-    margin: 0 25%;
-    position: fixed;
-    width: 50%;
-    min-height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-
-}
-
-.feedback {
-    overflow: hidden;
-    margin: 0 10%;
-    position: relative;
-}
-
 .feedback_field {
     width: 100%;
+    background: rgba(161, 159, 159, 0.1);
+    border: 0px;
+    position: relative;
+    padding-left: 3px;
+    font-size: 15px;
+    /*margin: 0 5%;*/
+    /*color: rgba(255, 255, 255, 0.7);*/
+}
+
+.username_field, .usermail_field {
+    height: 20px;
+    margin-bottom: 2px;
+}
+.message_field {
+    margin-bottom: 2px;
+}
+
+.button {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    height: 20px;
+    top: -3px;
+    left: 1.5px;
+    padding-left: 0;
 }
 
 .wrong_email {
     color: #fff;
+}
+
+.feedback_wrapper-1 {
+    display: table;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.feedback_wrapper-2 {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.feedback_wrapper {
+    vertical-align: middle;
+    margin: 0 25%;
+    position: relative;
+    width: 50%;
+    min-height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: inline-block;
+
+}
+
+.feedback {
+    /*overflow: hidden;*/
+    /*border: 1px inset #fff;*/
+    margin: 0 10%;
+    position: absolute;
+    padding: 5%;
+    width: 70%;
+    background: rgba(0, 0, 0, 0.7);
+    top: calc(50% - 134px);
+    border-radius: 20px;
 }
