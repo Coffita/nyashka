@@ -195,14 +195,24 @@ h1.post_head {
     position: relative;
     padding-left: 3px;
     font-size: 15px;
-    /*margin: 0 5%;*/
-    /*color: rgba(255, 255, 255, 0.7);*/
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.username_field {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.message_field {
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
 }
 
 .username_field, .usermail_field {
     height: 20px;
     margin-bottom: 2px;
 }
+
 .message_field {
     margin-bottom: 2px;
 }
@@ -214,10 +224,12 @@ h1.post_head {
     top: -3px;
     left: 1.5px;
     padding-left: 0;
+    border-radius: 4px;
 }
 
 .wrong_email {
-    color: #fff;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 4px;
 }
 
 .feedback_wrapper-1 {
