@@ -244,8 +244,6 @@ h1.post_head {
 }
 
 .feedback {
-    /*overflow: hidden;*/
-    /*border: 1px inset #fff;*/
     margin: 0 10%;
     position: absolute;
     padding: 5%;
