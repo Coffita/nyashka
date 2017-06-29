@@ -87,7 +87,7 @@ header, .posts-wrapper {
     position: fixed;
     right: 0;
     width: 200px;
-    height: 106px;
+    height: 145px;
     background: #000;
     opacity: 0.8;
     text-align: center;
@@ -188,7 +188,7 @@ h1.post_head {
     text-align: right;
 }
 
-.feedback_field {
+.feedback_form_field {
     width: 100%;
     background: rgba(161, 159, 159, 0.1);
     border: 0px;
@@ -228,23 +228,23 @@ h1.post_head {
 }
 
 .wrong_email {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.7);
     margin-bottom: 4px;
 }
 
-.feedback_wrapper-1 {
+.feedback_form_wrapper-1 {
     display: table;
     width: 100%;
     height: 100%;
     position: absolute;
 }
 
-.feedback_wrapper-2 {
+.feedback_form_wrapper-2 {
     display: table-cell;
     vertical-align: middle;
 }
 
-.feedback_wrapper {
+.feedback_form_wrapper {
     vertical-align: middle;
     margin: 0 25%;
     position: relative;
@@ -255,7 +255,7 @@ h1.post_head {
 
 }
 
-.feedback {
+.feedback_form {
     margin: 0 10%;
     position: absolute;
     padding: 5%;

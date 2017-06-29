@@ -9,6 +9,7 @@ require_once __DIR__ . '/models/Post.php';
             <a class="button_of_nav button_of_nav_for_me" href="new_post.php">ADD POST</a><br>
             <a class="button_of_nav button_of_nav_for_me" href="hidden.php">HIDE</a><br>
             <a class="button_of_nav button_of_nav_for_me" href="onlyforme_logout.php">LOG OUT</a>
+            <a class="button_of_nav button_of_nav_for_me" href="feedbacks.php">FEEDBACKS</a>
         </nav>
     </nav>
 
@@ -21,7 +22,7 @@ $posts = array_reverse(Post::find_all());
 <div class="posts-wrapper">
     <div class="posts">
       <?php foreach ($posts as $post) : ?>
-        <?php if (!$post->is_private || is_auth()) : ?>
+        <?php if (!$post->is_private /*|| is_auth()*/) : ?>
             <article class="post">
                 <h1 class="post_head"><?= $post->title ?></h1>
                 <p class="post_text"><?= $post->text ?></p>
