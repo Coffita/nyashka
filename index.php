@@ -3,19 +3,6 @@ include 'header.php';
 require_once __DIR__ . '/models/Post.php';
 ?>
 
-<?php if (is_auth()) : ?>
-    <nav class="navigation navigation_for_me-wrapper">
-        <nav class="navigation navigation_for_me">
-            <a class="button_of_nav button_of_nav_for_me" href="new_post.php">ADD POST</a><br>
-            <a class="button_of_nav button_of_nav_for_me" href="hidden.php">HIDE</a><br>
-            <a class="button_of_nav button_of_nav_for_me" href="onlyforme_logout.php">LOG OUT</a>
-            <a class="button_of_nav button_of_nav_for_me" href="feedbacks.php">FEEDBACKS</a>
-        </nav>
-    </nav>
-
-
-<?php endif; ?>
-
 <?php
 $posts = array_reverse(Post::find_all());
 ?>
@@ -27,7 +14,7 @@ $posts = array_reverse(Post::find_all());
                 <h1 class="post_head"><?= $post->title ?></h1>
                 <p class="post_text"><?= $post->text ?></p>
                 <div class="controls-wrapper">
-                    <p class="post_added_inf">Post added: <?= date('j F, Y G:i', strtotime(date($post->date_added)))?></p>
+                    <p class="post_added_inf">Post added: <?= date('j F, Y G:i', strtotime(date($post->date_added))) ?></p>
                     <?php if (is_auth()) : ?>
                         <div class="button_of_post-wrapper">
                             <a class="button_of_post edit_post" href="edit_post.php?id=<?=$post->id?>">Edit</a>

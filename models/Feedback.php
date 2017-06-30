@@ -8,16 +8,16 @@ class Feedback {
     public $message;
     public $time_of_sending;
 
-    public function __construct ($username, $usermail, $message){
-        $this->$username = $username;
-        $this->$usermail = $usermail;
-        $rhis->$message = $message;
+    public function __construct ($username, $usermail, $message) {
+        $this->username = $username;
+        $this->usermail = $usermail;
+        $this->message = $message;
     }
 
     public function create() {
         global $conn;
 
-        $sql = "INSERT INTO feedbacks (username, usermail, message, date_of_sending) VALUES ('$this->username', '$this->usermail', '$this->$mesage', NOW())";
+        $sql = "INSERT INTO feedbacks (username, usermail, message, time_of_sending) VALUES ('$this->username', '$this->usermail', '$this->message', NOW())";
 
         if ($conn->query($sql) === TRUE) {
             return true;
@@ -40,19 +40,19 @@ class Feedback {
 
     }
 
-    public function find_all() {
+    public static function find_all() {
         global $conn;
 
         $feedbacks = array();
 
         $sql = "SELECT * FROM feedbacks";
 
-        $result = $conn->query();
+        $result = $conn->query($sql);
 
         while ($row = $result->fetch_assoc()) {
             $feedback = new Feedback($row['username'], $row['usermail'], $row['message']);
             $feedback->id = $row['id'];
-            $feedback->date_of_sending = $row['date_of_sending'];
+            $feedback->time_of_sending = $row['time_of_sending'];
 
             $feedbacks[] = $feedback;
         }
@@ -60,17 +60,17 @@ class Feedback {
         return $feedbacks;
     }
 
-    public function find_by_id($id) {
+    public static function find_by_id($id) {
         global $conn;
 
-        $sql = "SELECT FROM feedbacks WHERE id='$id'"
+        $sql = "SELECT FROM feedbacks WHERE id='$id'";
 
         $result = $conn->query($sql);
 
         $row = $result->fetch_assoc();
 
         $feedback = new Feedback($row['username'], $row['usermail'], $row['message']);
-        $feedback->date_of_sending = $row['date_of_sending'];
+        $feedback->time_of_sending = $row['time_of_sending'];
 
     }
 }

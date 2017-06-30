@@ -41,4 +41,15 @@ include 'functions.php';
                     <a class="button_of_nav button_of_nav_for_all" href="feedback_action.php">FEEDBACK</a>
                 </nav>
             </nav>
+            <?php if (is_auth()) : ?>
+                <nav class="navigation navigation_for_me-wrapper">
+                    <nav class="navigation navigation_for_me">
+                        <a class="button_of_nav button_of_nav_for_me" href="new_post.php">ADD POST</a><br>
+                        <a class="button_of_nav button_of_nav_for_me" href="hidden.php">HIDE</a><br>
+                        <a class="button_of_nav button_of_nav_for_me" href="onlyforme_logout.php">LOG OUT</a>
+                        <a class="button_of_nav button_of_nav_for_me" href="feedbacks.php">FEEDBACKS</a>
+                    </nav>
+                </nav>
+            <?php endif; ?>
+
         </header>

@@ -3,13 +3,14 @@ require_once __DIR__ . '/models/Feedback.php';
 
 $sendto = "coffita@mail.ru";
 $username = trim($_POST['username']);
-$message = $_POST['message'];
 $usermail = $_POST['usermail'];
+$message = $_POST['message'];
 
 if (filter_var($usermail, FILTER_VALIDATE_EMAIL)) {
-    $feedback = new Feedback($username, $usermail, $message);
-
-    $result = $feedback->create();
+    if ($username && $usermail && $message) {
+        $feedback = new Feedback($username, $usermail, $message);
+        $feedback->create();
+    }
 
     header('Location: index.php');
 } else {

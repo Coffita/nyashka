@@ -7,6 +7,15 @@ html {
     height: 100%;
 }
 
+h1 {
+    font-family: 'Megrim', cursive;
+    color: #fff;
+}
+
+h1.post_head {
+    font-size: 32px;
+}
+
 body {
     background: url('../img/space3.jpg') no-repeat;
     background-size: cover;
@@ -30,19 +39,19 @@ header {
     padding-left: 15px;
 }
 
-header, .posts-wrapper {
+header, .posts-wrapper, .feedbacks-wrapper {
     margin: 0 25%;
     width: 50%;
 }
 
-.posts-wrapper {
+.posts-wrapper, .feedbacks-wrapper {
     height: calc(100% - 55px);
     position: absolute;
     overflow: hidden;
     top: 54px;
 }
 
-.posts {
+.posts, .feedbacks {
     position: relative;
     z-index: 1;
     padding: 10px 10px;
@@ -59,9 +68,7 @@ header, .posts-wrapper {
 }
 
 .navigation_for_all {
-    margin: 0 20px 0 0;
-    vertical-align: middle;
-    /*position: relative;*/
+    margin: 0 5px 0 0;
 }
 
 .button_of_nav {
@@ -84,6 +91,7 @@ header, .posts-wrapper {
 }
 
 .navigation_for_me-wrapper {
+    top: 0;
     position: fixed;
     right: 0;
     width: 200px;
@@ -118,9 +126,7 @@ a.button_of_nav:hover {
 
 }
 
-.button_of_post, .controls-wrapper, .post_text {
-    /*font-family: 'Dosis', sans-serif;*/
-    /*font-family: 'Josefin Sans', sans-serif;*/
+.button_of_post, .post_added_inf, .post_open, .post_text {
     font-family: 'Exo', sans-serif;
 }
 
@@ -150,7 +156,7 @@ a.button_of_nav:hover {
     padding-top: 15px;
 }
 
-.post {
+.post, .feedback {
     /*margin: 0 auto 50px auto;*/
     word-wrap: break-word;
     font-size: 20px;
@@ -160,14 +166,7 @@ a.button_of_nav:hover {
 
 p.post_text {
     font-size: 15px;
-    padding: 10px 10px;
-    /*font-family: 'Dosis', sans-serif;*/
-}
-
-h1.post_head {
-    font-size: 32px;
-    color: #fff;
-    font-family: 'Megrim', cursive;
+    padding: 10px;
 }
 
 .end_post {
