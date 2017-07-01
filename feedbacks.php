@@ -20,7 +20,7 @@ $feedbacks = array_reverse(Feedback::find_all());
                         <div class="buttons_of_feedback-wrapper">
                             <div class="buttons_of_feedback">
                                 <a class="reply button_of_feedback" href="reply.php?id=<?=$post->id?>">Reply</a>
-                                <a class="button_of_feedback delete_feedback" href="delete_feedback.php?id=<?=$post->id?>">Delete</a>
+                                <a class="button_of_feedback delete_feedback" href="delete_feedback.php?id=<?=$feedback->id?>">Delete</a>
                             </div>
                             <div class="end_of_feedback_message"></div>
                         </div>

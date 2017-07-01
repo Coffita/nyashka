@@ -1,7 +1,4 @@
 <?php
-
-// TODO: ZASHITA
-
 require_once __DIR__ . '/models/Post.php';
 
 $post = Post::find_by_id($_GET['id']);

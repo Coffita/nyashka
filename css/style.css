@@ -268,9 +268,7 @@ p.post_text, p.feedback_message {
 }
 
 .end_of_feedback_message {
-    width: 100%;
-    margin: 5px 0;
     height: 1px;
-    /*margin-right: 100px;*/
+    margin: 5px 0;
     background: rgba(255, 255, 255, 0.5);
 }

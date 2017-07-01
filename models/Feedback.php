@@ -30,10 +30,10 @@ class Feedback {
     public function delete() {
         global $conn;
 
-        $sql = "DELETE FROM feedbacks WHERE id='$this->$id'";
+        $sql = "DELETE FROM feedbacks WHERE id='$this->id'";
 
-        if ($conn->query($sql) ===TRUE ) {
-            return true;
+        if ($conn->query($sql) === TRUE ) {
+            return  TRUE;
         } else {
             return $conn->error;
         }
@@ -63,14 +63,16 @@ class Feedback {
     public static function find_by_id($id) {
         global $conn;
 
-        $sql = "SELECT FROM feedbacks WHERE id='$id'";
+        $sql = "SELECT * FROM feedbacks WHERE id='$id'";
 
         $result = $conn->query($sql);
 
         $row = $result->fetch_assoc();
-
         $feedback = new Feedback($row['username'], $row['usermail'], $row['message']);
+        $feedback->id = $row['id'];
         $feedback->time_of_sending = $row['time_of_sending'];
+
+        return $feedback;
 
     }
 }
