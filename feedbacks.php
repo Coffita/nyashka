@@ -19,7 +19,7 @@ $feedbacks = array_reverse(Feedback::find_all());
                         <p class="feedback_added_inf">Message sent: <?= date('j F, Y G:i', strtotime(date($feedback->time_of_sending))) ?></p>
                         <div class="buttons_of_feedback-wrapper">
                             <div class="buttons_of_feedback">
-                                <a class="reply button_of_feedback" href="reply.php?id=<?=$post->id?>">Reply</a>
+                                <a class="reply button_of_feedback" href="reply.php?id=<?=$feedback->id?>">Reply</a>
                                 <a class="button_of_feedback delete_feedback" href="delete_feedback.php?id=<?=$feedback->id?>">Delete</a>
                             </div>
                             <div class="end_of_feedback_message"></div>
