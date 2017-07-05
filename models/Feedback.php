@@ -70,7 +70,7 @@ class Feedback {
         $result = $conn->query($sql);
 
         $row = $result->fetch_assoc();
-        $feedback = new Feedback($row['username'], $row['usermail'], $row['message']);
+        $feedback = new Feedback($row['username'], $row['usermail'], $row['topic'], $row['message']);
         $feedback->id = $row['id'];
         $feedback->time_of_sending = $row['time_of_sending'];
 

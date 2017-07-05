@@ -1,7 +1,7 @@
 <?php include 'header.php'; ?>
 
-<div class="feedback_form_wrapper-1">
-    <div class="feedback_form_wrapper-2">
+<div class="feedback_form_wrapper-2">
+    <div class="feedback_form_wrapper-1">
         <div class="feedback_form_wrapper">
             <form class="feedback_form" action="feedback.php" method="post">
                 <?php if (isset($_GET['error'])) : ?>

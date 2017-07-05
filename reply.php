@@ -4,14 +4,19 @@ require_once __DIR__ . '/models/Feedback.php';
 ?>
 
 <?php $feedback = Feedback::find_by_id($_GET['id']); ?>
-<div class="relpy-wrapper">
-    <article class="reply">
-        <p>To: <?= $feedback->usermail ?></p>
-        <p>Username: <?= $feedback->username ?></p>
-        <!-- <p>Subject of topic: <?= $feedback->topic ?></p> -->
-        <form action="reply_form.php?id=<?=$feedback->id?>" method="post">
-            <textarea name="message_reply" rows="10" cols="50"></textarea>
-        </form>
-    </article>
+<div class="reply_wrapper-2">
+    <div class="reply_wrapper-1">
+        <div class="reply_wrapper">
+            <article class="reply">
+                <p class="reply_field reply_usermail">To: <?= $feedback->usermail ?></p>
+                <p class="reply_field reply_username">Username: <?= $feedback->username ?></p>
+                <p class="reply_field reply_topic">Subject of topic: <?= $feedback->topic ?></p>
+                <form action="reply_form.php?id=<?=$feedback->id?>" method="post">
+                    <textarea class="reply_field reply_message" name="message_reply" rows="10" cols="50"></textarea><br>
+                    <button class="reply_field button" type="button" name="button">Reply</button>
+                </form>
+            </article>
+        </div>
+    </div>
 </div>
 <?php include 'footer.php'; ?>
