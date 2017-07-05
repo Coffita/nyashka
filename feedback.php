@@ -5,10 +5,11 @@ $sendto = "coffita@mail.ru";
 $username = trim($_POST['username']);
 $usermail = $_POST['usermail'];
 $message = $_POST['message'];
+$topic = $_POST['topic'];
 
 if (filter_var($usermail, FILTER_VALIDATE_EMAIL)) {
-    if ($username && $usermail && $message) {
-        $feedback = new Feedback($username, $usermail, $message);
+    if ($username && $usermail && $topic && $message) {
+        $feedback = new Feedback($username, $usermail, $topic, $message);
         $feedback->create();
     }
 

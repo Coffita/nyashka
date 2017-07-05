@@ -5,19 +5,21 @@ class Feedback {
     public $id;
     public $username;
     public $usermail;
+    public $topic;
     public $message;
     public $time_of_sending;
 
-    public function __construct ($username, $usermail, $message) {
+    public function __construct ($username, $usermail, $topic, $message) {
         $this->username = $username;
         $this->usermail = $usermail;
+        $this->topic = $topic;
         $this->message = $message;
     }
 
     public function create() {
         global $conn;
 
-        $sql = "INSERT INTO feedbacks (username, usermail, message, time_of_sending) VALUES ('$this->username', '$this->usermail', '$this->message', NOW())";
+        $sql = "INSERT INTO feedbacks (username, usermail, topic, message, time_of_sending) VALUES ('$this->username', '$this->usermail', '$this->topic', '$this->message', NOW())";
 
         if ($conn->query($sql) === TRUE) {
             return true;
@@ -50,7 +52,7 @@ class Feedback {
         $result = $conn->query($sql);
 
         while ($row = $result->fetch_assoc()) {
-            $feedback = new Feedback($row['username'], $row['usermail'], $row['message']);
+            $feedback = new Feedback($row['username'], $row['usermail'], $row['topic'], $row['message']);
             $feedback->id = $row['id'];
             $feedback->time_of_sending = $row['time_of_sending'];
 

@@ -14,6 +14,7 @@ $feedbacks = array_reverse(Feedback::find_all());
                 <article class="feedback">
                     <h1 class="feedback_header feedback_head">From: <?= $feedback->username ?></h1>
                     <h1 class="feedback_header feedback_mail">Mail: <?= $feedback->usermail ?></h1>
+                    <h1 class="feedback_header feedback_topic">Topic: <?= $feedback->topic ?></h1>
                     <p class="feedback_message">Message: <?= $feedback->message ?></p>
                     <div class="controls_of_feedback">
                         <p class="feedback_added_inf">Message sent: <?= date('j F, Y G:i', strtotime(date($feedback->time_of_sending))) ?></p>
