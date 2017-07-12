@@ -30,33 +30,32 @@ input {
 
 .onlyforme-wrapper {
     position: relative;
-    display: inline-block;
-    vertical-align: middle;
-    /*background: rgba(0, 0, 0, 0.5);*/
-    min-height: 100%;
+    height: 100%;
     width: 50%;
     margin: 0 25%;
 }
 
 .onlyforme {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.8);
     margin: 0 30%;
     padding: 5% 0;
-    top: calc(50% - 63px);
+    top: calc(50% - 65px);
     position: absolute;
     width: 40%;
     border-radius: 15px;
 }
 
 .onlyforme_field {
-    background: rgba(161, 159, 159, 0.1);
+    background: rgba(161, 159, 159, 0.2);
     border: none;
+    font-family: 'Exo', sans-serif;
+    color: rgba(255, 255, 255, 0.8);
 
 }
 
 button {
-    width: 75%;
-    background: rgba(161, 159, 159, 0.1);
+    width: 68%;
+    background: rgba(161, 159, 159, 0.2);
     border: 0px;
     position: relative;
     font-size: 15px;
@@ -66,6 +65,7 @@ button {
     top: 3px;
     padding-left: 0;
     border-radius: 4px;
+    font-family: 'Exo', sans-serif;
 }
 
 .onlyforme_email_field {

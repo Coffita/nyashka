@@ -130,7 +130,7 @@ a.button_of_nav:hover {
 
 }
 
-.button_of_post, .post_added_inf, .post_open, .post_text, .controls_of_feedback, .reply_field {
+p, .button_of_post, .post_added_inf, .post_open, .post_text, .controls_of_feedback, .reply_field, .feedback_form_field {
     font-family: 'Exo', sans-serif;
 }
 
