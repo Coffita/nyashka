@@ -130,7 +130,7 @@ a.button_of_nav:hover {
 
 }
 
-p, .button_of_post, .post_added_inf, .post_open, .post_text, .controls_of_feedback, .reply_field, .feedback_form_field {
+p, .button_of_post, .post_added_inf, .post_open, .post_text, .controls_of_feedback, .reply_field, .feedback_form_field, .new_post_field {
     font-family: 'Exo', sans-serif;
 }
 
@@ -190,32 +190,32 @@ p.post_text, p.feedback_message {
     text-align: right;
 }
 
-.feedback_form_field, .reply_field {
+.feedback_form_field, .reply_field, .new_post_field {
     width: 100%;
     background: rgba(161, 159, 159, 0.1);
     border: 0px;
     position: relative;
     padding-left: 3px;
     font-size: 15px;
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.6);
 }
 
-.username_field {
+.username_field, .new_post_title_field {
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
 }
 
-.message_field, .reply_message {
+.message_field, .reply_message, .new_post_text_field {
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
 }
 
-.username_field, .usermail_field, .topic_field, .reply_username, .reply_usermail, .reply_topic {
+.username_field, .usermail_field, .topic_field, .reply_username, .reply_usermail, .reply_topic, .new_post_title_field {
     height: 20px;
     margin-bottom: 2px;
 }
 
-.message_field {
+.message_field, .new_post_text_field {
     margin-bottom: 2px;
 }
 
@@ -234,19 +234,19 @@ p.post_text, p.feedback_message {
     margin-bottom: 4px;
 }
 
-.feedback_form_wrapper-2, .reply_wrapper-2 {
+.feedback_form_wrapper-2, .reply_wrapper-2, .new_post-wrapper-2 {
     display: table;
     width: 100%;
     height: 100%;
     position: absolute;
 }
 
-.feedback_form_wrapper-1, .reply_wrapper-1 {
+.feedback_form_wrapper-1, .reply_wrapper-1, .new_post-wrapper-1 {
     display: table-cell;
     vertical-align: middle;
 }
 
-.feedback_form_wrapper, .reply_wrapper {
+.feedback_form_wrapper, .reply_wrapper, .new_post-wrapper-1 {
     vertical-align: middle;
     margin: 0 25%;
     position: relative;
@@ -257,7 +257,7 @@ p.post_text, p.feedback_message {
 
 }
 
-.feedback_form {
+.feedback_form, .new_post {
     margin: 0 10%;
     position: absolute;
     padding: 5%;
