@@ -9,7 +9,7 @@ $posts = array_reverse(Post::find_all());
 <div class="posts-wrapper">
     <div class="posts">
       <?php foreach ($posts as $post) : ?>
-        <?php if (!$post->is_private /*|| is_auth()*/) : ?>
+        <?php if (!$post->is_private || is_auth()) : ?>
             <article class="post">
                 <h1 class="post_head"><?= $post->title ?></h1>
                 <p class="post_text"><?= $post->text ?></p>

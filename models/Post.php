@@ -106,6 +106,24 @@ class Post {
         return $result;
     }
 
+    public static function find_hidden() {
+        global $conn;
+
+        $sql = "SELECT * FROM posts WHERE is_private='1'";
+
+        $result = $conn->query($sql);
+
+        while ($row = $result->fetch_assoc()) {
+            $post = new Post($row['title'], $row['text']);
+            $post->id = $row['id'];
+            $post->is_private = $row['is_private'];
+            $post->date_added = $row['date_added'];
+
+            $posts[] = $post;
+        }
+
+        return $posts;
+    }
 
 
 
