@@ -8,6 +8,7 @@ class Feedback {
     public $topic;
     public $message;
     public $time_of_sending;
+    public $message_reply;
 
     public function __construct ($username, $usermail, $topic, $message) {
         $this->username = $username;
@@ -27,6 +28,16 @@ class Feedback {
             return $conn->error;
         }
 
+    }
+
+    public function add_reply() {
+        global $conn;
+
+        $sql = "UPDATE feedbacks SET message_reply='$this->message_reply' WHERE id='$this->id'";
+
+        $result = $conn->query($sql);
+
+        return $result;
     }
 
     public function delete() {

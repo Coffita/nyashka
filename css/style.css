@@ -48,7 +48,7 @@ header, .posts-wrapper, .feedbacks-wrapper {
     width: 50%;
 }
 
-.posts-wrapper, .feedbacks-wrapper     {
+.posts-wrapper, .feedbacks-wrapper {
     height: calc(100% - 55px);
     position: absolute;
     overflow: hidden;
@@ -200,6 +200,10 @@ p.post_text, p.feedback_message {
     color: rgba(255, 255, 255, 0.6);
 }
 
+.message_field {
+    height: 150px;
+}
+
 .username_field, .new_post_title_field {
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
@@ -212,7 +216,7 @@ p.post_text, p.feedback_message {
 
 .username_field, .usermail_field, .topic_field, .reply_username, .reply_usermail, .reply_topic, .new_post_title_field {
     height: 20px;
-    margin-bottom: 2px;
+    margin-bottom: 3px;
 }
 
 .message_field, .new_post_text_field {
@@ -223,7 +227,7 @@ p.post_text, p.feedback_message {
     text-align: center;
     color: rgba(255, 255, 255, 0.5);
     height: 20px;
-    top: -3px;
+    top: 0px;
     left: 1.5px;
     padding-left: 0;
     border-radius: 4px;
@@ -263,8 +267,15 @@ p.post_text, p.feedback_message {
     padding: 5%;
     width: 70%;
     background: rgba(0, 0, 0, 0.7);
-    top: calc(50% - 162px);
     border-radius: 20px;
+}
+
+.feedback_form {
+    top: calc(50% - 155px);
+}
+
+.new_post, .edit_post {
+    top: calc(50% - 151.5px);
 }
 
 .reply {
@@ -281,4 +292,24 @@ p.post_text, p.feedback_message {
     height: 1px;
     margin: 5px 0 15px 0;
     background: rgba(255, 255, 255, 0.5);
+}
+
+.edit_post_title_field, .new_post_title_field {
+    margin: 4px 0;
+    height: 25px;
+}
+
+.edit_post_text_field, {
+    margin: 0 0 10px 0;
+    width: 102%;
+    padding-left: 2.2px;
+}
+
+.new_post_text_field {
+    margin: 0 0 10px 0;
+}
+
+.edit_post_text_field-wrapper {
+    width: 100%;
+    overflow: hidden;
 }
